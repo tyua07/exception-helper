@@ -4,15 +4,15 @@ namespace Yangyifan\Exception;
 
 use Yangyifan\Response\CodeHelp;
 
-class TimeOutException extends InvalidArgumentException
+class FatalErrorException extends InvalidArgumentException
 {
     /**
-     * RequestMethodErrorException constructor.
+     * FatalErrorException constructor.
      *
      * @param string $message
      * @param int $code
      */
-    public function __construct($message = '', $code = CodeHelp::APP_IS_TOO_OLD)
+    public function __construct($message = '', $code = CodeHelp::FATAL_ERROR)
     {
         $message = empty($message) ? CodeHelp::getErrorMsg($code) : $message;
 

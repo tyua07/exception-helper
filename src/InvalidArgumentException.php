@@ -1,25 +1,16 @@
 <?php
 
-// +----------------------------------------------------------------------
-// | date: 2016-11-12
-// +----------------------------------------------------------------------
-// | InvalidArgumentException.php: 自定义异常类
-// +----------------------------------------------------------------------
-// | Author: yangyifan <yangyifanphp@gmail.com>
-// +----------------------------------------------------------------------
-
 namespace Yangyifan\Exception;
 
 use Exception;
 use Yangyifan\Response\CodeHelp;
+use Yangyifan\Response\ResponseHelper;
 
 class InvalidArgumentException extends Exception
 {
     /**
-     * HelpException constructor.
+     * InvalidArgumentException constructor.
      *
-     * @description 构造方法
-     * @author @author yangyifan <yangyifanphp@gmail.com>
      * @param string $message
      * @param int $code
      * @param Exception $previous
@@ -27,5 +18,13 @@ class InvalidArgumentException extends Exception
     public function __construct($message, $code = CodeHelp::NORMAL_ERROR)
     {
         parent::__construct($message, $code);
+    }
+
+    /**
+     * 响应
+     */
+    public function render()
+    {
+        return ResponseHelper::errorResponse($this->getMessage(), $this->getCode());
     }
 }

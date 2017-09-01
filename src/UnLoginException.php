@@ -4,15 +4,15 @@ namespace Yangyifan\Exception;
 
 use Yangyifan\Response\CodeHelp;
 
-class TimeOutException extends InvalidArgumentException
+class UnLoginException extends InvalidArgumentException
 {
     /**
-     * RequestMethodErrorException constructor.
+     * UnLoginException constructor.
      *
      * @param string $message
      * @param int $code
      */
-    public function __construct($message = '', $code = CodeHelp::APP_IS_TOO_OLD)
+    public function __construct($message = '', $code = CodeHelp::UN_LOGIN)
     {
         $message = empty($message) ? CodeHelp::getErrorMsg($code) : $message;
 

@@ -1,20 +1,21 @@
 {
-    "name": "yangyifan/exception-helper",
-    "authors": [
-        {
-            "name": "yangyifan",
-            "email": "yangyifanphp@gmail.com"
-        }
-    ],
-    "autoload": {
-      "psr-4": {
-        "Yangyifan\\Exception\\": "./src"
-      }
+  "name": "yangyifan/exception-helper",
+  "authors": [
+    {
+      "name": "yangyifan",
+      "email": "yangyifanphp@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Yangyifan\\Exception\\": "./src"
+    }
   },
   "require-dev": {
-      "phpunit/phpunit": "5.5.*"
+    "phpunit/phpunit": "5.5.*"
   },
-    "require": {
-        "yangyifan/response-helper": "v0.1"
-    }
+  "require": {
+    "laravel/framework": ">=5.5",
+    "yangyifan/response-helper": "v0.1"
+  }
 }
